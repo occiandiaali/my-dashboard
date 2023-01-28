@@ -1,0 +1,90 @@
+.lendsqr-logo {
+  width: 180px;
+  height: 40px;
+}
+.navbar {
+  height: 70px;
+  border-bottom: 0.5px solid rgb(231, 228, 228);
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #555;
+  z-index: 99;
+
+  .wrapper {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .brand-logo {
+      padding-left: 12px;
+    }
+
+    .search-div {
+      display: flex;
+      align-items: center;
+      //border: 0.5px solid lightgrey;
+      padding: 3px;
+
+      input {
+        border: 0.4px solid rgb(212, 202, 202); //none;
+        border-right: none;
+        background-color: white;
+        width: 280px;
+        // color: black;
+        padding: 10px 5px;
+        border-radius: 5px 0px 0px 5px;
+        outline: none;
+        //background: transparent;
+
+        &::placeholder {
+          font-size: 12px;
+        }
+      }
+      .search-icon-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: aqua;
+        width: 40px;
+        height: 37px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+      .navbar-search-icon {
+        color: white;
+        // position: absolute;
+        // right: 0px;
+        cursor: pointer;
+      }
+    }
+    .nav-end {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding-right: 70px;
+      .navbar-icon {
+        cursor: pointer;
+        color: rgb(134, 131, 131);
+      }
+      .docs-text a {
+        font-size: 16px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        color: #555;
+        cursor: pointer;
+      }
+      img {
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        border-radius: 50%;
+      }
+    }
+  }
+}

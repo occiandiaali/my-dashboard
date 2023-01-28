@@ -1,24 +1,16 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useContext } from "react";
+import { Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import { DarkContext } from "./context/darkModeContext";
+import "./style/dark.scss";
 
 function App() {
+  const { isDark, setIsDark } = useContext(DarkContext);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={localStorage.getItem("isDark") === "dark" ? "dark" : ""}>
+      <div className="app">
+        <Navbar setIsDark={setIsDark} isDark={isDark} />
+      </div>
     </div>
   );
 }
